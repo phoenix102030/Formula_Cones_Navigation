@@ -1,0 +1,11 @@
+
+# Config for the gnn_map_colorizer node
+
+gnn_map_colorizer:
+  model_path: "weights/gnn_pi4_2.pt"
+  propagation_distance: 2.0
+  max_prop_angle: 0.7854
+  max_input_range: 15.0
+  max_track_width: 5.0
+  association_threshold: 2.0
+  max_steps: 20

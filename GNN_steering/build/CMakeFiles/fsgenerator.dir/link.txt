@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O3 -shared  -o fsgenerator.cpython-310-aarch64-linux-gnu.so CMakeFiles/fsgenerator.dir/src/track_gen.cpp.o  /usr/lib/gcc/aarch64-linux-gnu/11/libgomp.so /usr/lib/aarch64-linux-gnu/libpthread.a 

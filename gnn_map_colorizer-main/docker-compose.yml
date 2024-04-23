@@ -1,0 +1,37 @@
+version: '3.8'
+
+### -----------ROS MASTER----------------- ###
+# Do not edit! Works with melodic and noetic
+services:
+  master:
+    container_name: 
+      master-container
+    image: ros:noetic-ros-core-focal
+    environment:
+      - ROS_DISTRO=noetic
+    restart: unless-stopped
+    networks:
+      - ros_network
+    command: bash -c "source /opt/ros/noetic/setup.bash && roscore"
+
+### -----------PACKAGE----------------- ###
+  gnn_map_colorizer:
+    depends_on:
+      - master
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - PACKAGE_NAME=gnn_map_colorizer
+      - ROS_MASTER_URI=http://localhost:11311 
+    volumes:
+      - ./:/ws/src/gnn_map_colorizer
+      - ./fs_msgs:/ws/src/fs_msgs
+    network_mode: host
+    entrypoint: /ws/src/gnn_map_colorizer/docker-entrypoint.sh 
+    command: bash -c "source devel/setup.bash && roslaunch --wait --log gnn_map_colorizer run.launch"
+
+networks:
+  ros_network:
+    driver: bridge

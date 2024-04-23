@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gnn_map_colorizer</name>
+  <version>0.0.0</version>
+  <description>The gnn_map_colorizer package</description>
+
+  <author email="test@kthformulastudent.com">test</author>
+  <maintainer email="test@kthformulastudent.com">test</maintainer>
+  <url type="website">http://wiki.kthformulastudent.se/index.php?title=FastSLAM2.0</url>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>fs_msgs</build_depend>
+  <build_depend>rospack</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <build_export_depend>fs_msgs</build_export_depend>
+  <build_export_depend>rospack</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>fs_msgs</exec_depend>
+  <exec_depend>rospack</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  
+  <export></export>
+</package>
